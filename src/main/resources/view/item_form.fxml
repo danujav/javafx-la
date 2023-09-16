@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="640.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.javafxla.controller.ItemFormController">
+   <children>
+      <Label layoutX="207.0" layoutY="29.0" text="Item Manage">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCode" layoutX="31.0" layoutY="224.0" onAction="#txtCodeOnAction" prefHeight="30.0" prefWidth="246.0" promptText="Item Code" />
+      <TextField fx:id="txtDescription" layoutX="315.0" layoutY="224.0" prefHeight="30.0" prefWidth="246.0" promptText="Description" />
+      <TextField fx:id="txtUnitPrice" layoutX="31.0" layoutY="303.0" prefHeight="30.0" prefWidth="246.0" promptText="Unit Price" />
+      <TextField fx:id="txtQuantityOnHand" layoutX="315.0" layoutY="303.0" prefHeight="30.0" prefWidth="246.0" promptText="Quatity On Hand" />
+      <Button layoutX="480.0" layoutY="359.0" mnemonicParsing="false" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #3498db;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="388.0" layoutY="359.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #95a5a6;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="27.0" layoutY="29.0" mnemonicParsing="false" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #9b59b6;" text="Back">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="tblItem" layoutX="29.0" layoutY="422.0" prefHeight="180.0" prefWidth="534.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="75.0" text="Code" />
+          <TableColumn fx:id="colDescription" prefWidth="207.0" text="Description" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="117.0" text="Unit Price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="134.0" text="Quntity On Hand" />
+        </columns>
+      </TableView>
+      <ComboBox onAction="#cmbSupplierIdOnAction" fx:id="cmbSupplierId" layoutX="31.0" layoutY="86.0" prefHeight="30.0" prefWidth="246.0" />
+      <TextField fx:id="txtSupplierName" layoutX="315.0" layoutY="86.0" prefHeight="30.0" prefWidth="246.0" promptText="Supplier Name" />
+      <TextField fx:id="txtShop" layoutX="31.0" layoutY="152.0" prefHeight="30.0" prefWidth="246.0" promptText="Supplier Shop" />
+      <TextField fx:id="txtSupplierTel" layoutX="315.0" layoutY="152.0" prefHeight="30.0" prefWidth="246.0" promptText="Supplier Telephone" />
+   </children>
+</AnchorPane>
